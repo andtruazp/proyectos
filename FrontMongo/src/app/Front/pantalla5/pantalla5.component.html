@@ -1,0 +1,50 @@
+<body>
+  <div class="container pt-5">
+          <div class="row">
+            <div class="d-flex justify-content-center" >
+              <textarea name="Codigo" style="width: 800PX; height: 300px;" readonly></textarea>
+            </div>
+            <br>
+            <br>
+            <div class="d-flex justify-content-center" style="margin-top: 30px;">
+              <!--<textarea name="Codigo" style="width: 800PX; height: 60px;"></textarea>-->
+              <div class="card text-bg-light w-75 mb-3" >
+                <div class="card-header">Nombre Ususario</div>
+                <div class="card-body">
+                  <p class="card-text">El comentario va aqui</p>
+                  <p>La fecha aqui</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                
+                  <form [formGroup]="comentarioForm" (ngSubmit)="addComentario()">
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Agrega un comentario" aria-label="Recipient's username" aria-describedby="button-addon2" formControlName="contenidoC">
+                      <button type="submit" [disabled]="comentarioForm.invalid" class="btn btn-outline-secondary"  id="button-addon2">Comentar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</body>
+
+<!--<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/pantalla4">Revision</a></li>
+          <li class="breadcrumb-item"><a href="/pantalla5">Aceptados</a></li>
+          <li class="breadcrumb-item"><a href="/pantalla6">Denegados</a></li>
+          
+        </ol>
+      </nav>
+</div>-->

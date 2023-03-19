@@ -1,0 +1,36 @@
+#txtCodigo{
+    width: 800px;
+    height: 300px;
+}
+
+#txtComentario{
+    width: 800px;
+    height: 100px;
+}
+
+#user{
+    width: 400px;
+}
+
+#date{
+    width: 400px;
+}
+
+#info{
+    padding-top: 80px;
+}
+
+#btnEnviar{
+    padding-left: 300px;
+}
+
+#cuerpo{
+    background-color: blueviolet;
+}
+#bar{
+    background-color: rgb(190, 211, 211);
+}
+
+#panelsStayOpen-collapseOne{
+    background-color: rgb(180, 173, 165);
+}
