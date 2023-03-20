@@ -3,13 +3,18 @@ export class Publicacion{
     usuario: string;
     fechaPub?: Date;
     contenido: string;
+    titulo: string;
     validado?: boolean;
     categoria: string;
     comentario?: Array<any>;
 
-    constructor(usuario: string, contenido: string, categoria:string){
+    constructor(id:string, usuario: string, fechaPub:Date, contenido: string, titulo:string, validado:boolean,categoria:string){
+        this._id= id;
         this.usuario = usuario;
+        this.fechaPub= fechaPub;
         this.contenido = contenido;
+        this.titulo= titulo;
+        this.validado= validado;
         this.categoria = categoria;
     }
 }

@@ -1,18 +1,37 @@
 <body>
   <div class="container pt-5">
           <div class="row">
-            <div class="d-flex justify-content-center" >
-              <textarea name="Codigo" style="width: 800PX; height: 300px;" readonly></textarea>
-            </div>
+            <form >
+              <div class="card">
+                <div  class="card-header">
+                  {{ publicacion.usuario }}
+                </div>
+                <div class="card-body">
+                  <h5  class="card-title">Categoría: {{ publicacion.categoria }}</h5>
+                  <div class="d-flex justify-content-center" >
+                    <textarea  name="Codigo" style="width: 800PX; height: 300px;" readonly>{{ publicacion.contenido }}</textarea>
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  La fecha va aqui
+                </div>
+              </div>
+            </form>
+            
             <br>
             <br>
-            <div class="d-flex justify-content-center" style="margin-top: 30px;">
+            <div class="d-flex justify-content-center" style="margin-top: 30px;" *ngFor="let comentario of listComentarios">
               <!--<textarea name="Codigo" style="width: 800PX; height: 60px;"></textarea>-->
               <div class="card text-bg-light w-75 mb-3" >
-                <div class="card-header">Nombre Ususario</div>
+                <div class="card-header">{{ comentario.usuario }}</div>
                 <div class="card-body">
-                  <p class="card-text">El comentario va aqui</p>
-                  <p>La fecha aqui</p>
+                  <p class="card-text">{{ comentario.contenidoC }}</p>
+                  <div class="card-footer text-muted">
+                    {{ comentario.fechaPubC }}
+                    <div class="float-right">
+                      <a (click)="eliminarComen(comentario._id)" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

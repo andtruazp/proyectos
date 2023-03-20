@@ -27,7 +27,7 @@ const routes: Routes = [
     component:Pantalla4Component
   },
   {
-    path:'pantalla5',
+    path:'pantalla5/:id',
     component:Pantalla5Component
   },
   {

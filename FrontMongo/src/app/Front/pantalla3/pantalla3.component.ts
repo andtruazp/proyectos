@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Publicacion } from './../../models/publicacion';
+import { PublicacionService } from 'src/app/services/publicacion.service';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,6 +8,23 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   templateUrl: './pantalla3.component.html',
   styleUrls: ['./pantalla3.component.css']
 })
-export class Pantalla3Component {
+export class Pantalla3Component implements OnInit {
+  
+  listPublicacion: Publicacion[]=[];
+
+  constructor(private _publicacionService: PublicacionService){}
+  
+  ngOnInit(): void {
+    this.getPublicaciones();
+  }
+
+  getPublicaciones(){
+    this._publicacionService.getPublicaciones().subscribe(data=>{
+      console.log(data);
+      this.listPublicacion=Object.values(data);
+    }, error =>{
+      console.log(error);
+    })
+  }
   
 }

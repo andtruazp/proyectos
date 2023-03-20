@@ -1,9 +1,20 @@
 const Comentario = require('../models/comentario');
 const comentarioCtrl = {};
 
+comentarioCtrl.getPublicacion = async (req, res) =>{
+    const publicacion = await Comentario.findById(req.params.id);
+    res.json(publicacion);
+}
 comentarioCtrl.getComentarios = async (req, res) => {
-    const comentarios = await Comentario.findById(req.params.id);
-    res.json(comentarios);
+    try {
+        const comentario = await Comentario.findById(req.params.id, 'comentarios');
+        res.json(comentario.comentarios);
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: err.message });
+      }
+    /*const comentarios = await Comentario.findById(req.params.id);
+    res.json(comentarios);*/
 };
 
 comentarioCtrl.addComentario = async (req, res) => {

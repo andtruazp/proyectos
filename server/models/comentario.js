@@ -37,6 +37,10 @@ const PublicacionesSchema = new Schema({
         type: String,
         required: true
     },
+    titulo: {
+        type: String,
+        required: true
+    },
     comentarios: [comentarioSchema]
 });
     
