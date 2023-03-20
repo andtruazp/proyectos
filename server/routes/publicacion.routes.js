@@ -3,6 +3,7 @@ const router = express.Router();
 
 const publiCtrl = require('../controllers/publicacion.controller');
 
-router.get('/',publiCtrl.getPublicaciones);
+router.get('/',publiCtrl.getPublicacionesValidadas);
+router.get('/sinvalidar',publiCtrl.getPublicacionesNoValidadas);
 
 module.exports = router;

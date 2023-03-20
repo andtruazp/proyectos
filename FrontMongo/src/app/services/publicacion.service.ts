@@ -15,4 +15,8 @@ export class PublicacionService {
   getPublicaciones(): Observable<any>{
     return this.http.get(this.url);
   }
+
+  getPubNoValidas(): Observable<any>{
+    return this.http.get(this.url + '/sinvalidar');
+  }
 }

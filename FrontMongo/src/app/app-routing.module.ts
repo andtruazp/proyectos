@@ -23,7 +23,7 @@ const routes: Routes = [
     component:Pantalla3Component
   },
   {
-    path:'pantalla4',
+    path:'pantalla4/:id',
     component:Pantalla4Component
   },
   {

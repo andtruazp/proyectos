@@ -4,7 +4,25 @@
           <li class="breadcrumb-item"><a href="/pantalla4">Revision</a></li>
           <li class="breadcrumb-item"><a href="/pantalla5">Aceptados</a></li>
           <li class="breadcrumb-item"><a href="/pantalla6">Denegados</a></li>
-          
         </ol>
       </nav>
+</div>
+<div class="container pt-5">
+  <div class="row">
+    <div class="card text-bg-light w-75 mb-3" *ngFor="let publicacion of listPublicacion">
+      <div class="card-header">
+        {{ publicacion.usuario }}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ publicacion.categoria }}</h5>
+        <p class="card-text">{{ publicacion.titulo }}</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <a [routerLink]="['/pantalla4/',publicacion._id]" class="btn btn-primary float-left">ver</a>
+        </div>
+        <div class="card-footer text-muted">
+          {{ publicacion.fechaPub }}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

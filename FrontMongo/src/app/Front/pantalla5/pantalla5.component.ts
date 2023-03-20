@@ -51,6 +51,7 @@ export class Pantalla5Component implements OnInit{
 
   verCodigo(){
     this._comentarioService.getPublicacion(this.id).subscribe(data => {
+
       console.log(data);
       this.publicacion=data;
     }, error =>{
