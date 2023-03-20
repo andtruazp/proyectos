@@ -12,6 +12,7 @@ import { Pantalla3Component } from './Front/pantalla3/pantalla3.component';
 import { Pantalla4Component } from './Front/pantalla4/pantalla4.component';
 import { Pantalla5Component } from './Front/pantalla5/pantalla5.component';
 import { Pantalla6Component } from './Front/pantalla6/pantalla6.component';
+import { Pantalla7Component } from './Front/pantalla7/pantalla7.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { Pantalla6Component } from './Front/pantalla6/pantalla6.component';
     Pantalla3Component,
     Pantalla4Component,
     Pantalla5Component,
-    Pantalla6Component
+    Pantalla6Component,
+    Pantalla7Component
   ],
   imports: [
     BrowserModule,

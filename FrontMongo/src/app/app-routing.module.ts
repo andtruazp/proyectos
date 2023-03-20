@@ -6,6 +6,7 @@ import { Pantalla3Component } from './Front/pantalla3/pantalla3.component';
 import { Pantalla4Component } from './Front/pantalla4/pantalla4.component';
 import { Pantalla5Component } from './Front/pantalla5/pantalla5.component';
 import { Pantalla6Component } from './Front/pantalla6/pantalla6.component';
+import { Pantalla7Component } from './Front/pantalla7/pantalla7.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path:'pantalla3',
     component:Pantalla3Component
+  },
+  {
+    path:'pantalla7/:cat',
+    component:Pantalla7Component
   },
   {
     path:'pantalla4/:id',

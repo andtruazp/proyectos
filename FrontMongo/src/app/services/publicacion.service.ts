@@ -19,4 +19,12 @@ export class PublicacionService {
   getPubNoValidas(): Observable<any>{
     return this.http.get(this.url + '/sinvalidar');
   }
+
+  getCategorias(): Observable<any>{
+    return this.http.get(this.url + 'categoria');
+  }
+
+  getPorCategoria(cat: string): Observable<any>{
+    return this.http.get(this.url+'categoria/'+cat);
+  }
 }

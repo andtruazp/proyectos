@@ -5,5 +5,7 @@ const publiCtrl = require('../controllers/publicacion.controller');
 
 router.get('/',publiCtrl.getPublicacionesValidadas);
 router.get('/sinvalidar',publiCtrl.getPublicacionesNoValidadas);
+router.get('/categoria/:categoria',publiCtrl.getPorCategoria);
+router.get('/categoria',publiCtrl.getCategorias);
 
 module.exports = router;
