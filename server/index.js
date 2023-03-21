@@ -12,9 +12,11 @@ app.set('port', process.env.PORT || 3001);
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors());
+
 //routes
 app.use('/comentario',require('./routes/comentario.routes'));
 app.use('/publicacion',require('./routes/publicacion.routes'));
+
 //starting server
 app.listen(app.get('port'), ()=>{
     console.log('Server on port', app.get('port'));

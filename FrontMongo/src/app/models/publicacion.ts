@@ -7,6 +7,7 @@ export class Publicacion{
     validado?: boolean;
     categoria: string;
     comentario?: Array<any>;
+    retroalim?: string;
 
     constructor(id:string, usuario: string, fechaPub:Date, contenido: string, titulo:string, validado:boolean,categoria:string){
         this._id= id;

@@ -3,7 +3,7 @@
     height: 300px;
 }
 
-#txtComentario{
+#txtRetroalim{
     width: 800px;
     height: 100px;
 }
@@ -17,20 +17,21 @@
 }
 
 #info{
-    padding-top: 80px;
+    padding-top: 50px;
+}
+
+#title{
+    width: 800px;
 }
 
 #btnEnviar{
     padding-left: 300px;
 }
 
-#cuerpo{
-    background-color: blueviolet;
-}
-#bar{
-    background-color: rgb(190, 211, 211);
+body{
+    padding: 10px;
 }
 
-#panelsStayOpen-collapseOne{
-    background-color: rgb(180, 173, 165);
+::placeholder{
+    color: black;
 }

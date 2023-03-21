@@ -16,6 +16,22 @@ export class PublicacionService {
     return this.http.get(this.url);
   }
 
+  getPublicacion(id:any) : Observable<any> {
+    return this.http.get(this.url+id);
+  }
+
+  putAdminComment(id : any, publicacion : Publicacion) {
+    return this.http.put(this.url + id, publicacion)
+  }
+
+  eliminarPublicacion(id : any): Observable<any>{
+    return this.http.delete(this.url + id);
+  }
+
+  crearPublicacion(publicacion : Publicacion): Observable<any> {
+    return this.http.post(this.url, publicacion);
+  }
+
   getPubNoValidas(): Observable<any>{
     return this.http.get(this.url + '/sinvalidar');
   }

@@ -22,22 +22,28 @@
                     <div class="accordion-body">
                     </div>
                     <div class="d-flex justify-content-center" id="info">
-                        <input id="user" type="text" readonly placeholder="Usuario">
-                        <input id="date" type="text" readonly placeholder="Fecha">
-                    </div><br>
-                    <div class="d-flex justify-content-center">
-                        <textarea name="codigo" id="txtCodigo" placeholder="CÓDIGO" readonly></textarea>
+                        <input id="user" type="text" readonly placeholder="{{publicacion.usuario}}">
+                        <input id="date" type="text" readonly placeholder="{{publicacion.fechaPub}}">
                     </div>
-                    <div class="form-check form-switch d-flex justify-content-center" id="chValidar">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault"> Validar</label>
+                    <div class="d-flex justify-content-center" id="info2">
+                        <input id="title" type="text" readonly placeholder="{{publicacion.titulo}}">
                     </div><br>
                     <div class="d-flex justify-content-center">
-                        <textarea name="comentario" id="txtComentario" placeholder="Comentario(s)"></textarea>
-                    </div><br>
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-outline-primary btn-lg">Enviar comentario</button>
-                    </div>
+                        <textarea name="codigo" id="txtCodigo" placeholder="Código" readonly>{{publicacion.contenido}}</textarea>
+                    </div><br><br>
+                
+                    <form [formGroup]="retroalimentarForm" (ngSubmit)="agregarRetroalim()">
+                        <div class="form-check form-switch d-flex justify-content-center" id="chValidar">
+                            <input class="form-check-input form-control" type="checkbox" role="switch" id="flexSwitchCheckDefault" formControlName="validado">
+                            <label class="form-check-label" for="flexSwitchCheckDefault"> Validar</label>
+                        </div><br>
+                        <div class="d-flex justify-content-center">
+                            <textarea id="txtRetroalim" class="form-control" placeholder="Retroalimentacion" formControlName="retroalim"></textarea>
+                        </div><br>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" [disabled]="retroalimentarForm.invalid" class="btn btn-outline-primary btn-lg">Enviar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
